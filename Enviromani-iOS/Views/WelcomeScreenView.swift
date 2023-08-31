@@ -12,36 +12,35 @@ struct WelcomeScreenView: View {
         ZStack {
             Color("lightGreen").ignoresSafeArea()
             VStack(alignment: .center, content: {
-                Image("WelcomeScreen")
+                Image("logo")
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color.white, lineWidth: 3)
-                    )
                 Spacer()
                 
                 VStack(spacing: 15) {
-                    Text("Enviromania")
+                    Spacer()
+                    Text("Connect. Inspire. Take Action.")
                         .font(.custom(
                             "AmericanTypewriter",
                             fixedSize: 34)
                             .weight(.black)
                         )
-                    .fontWeight(.bold)
-                    Text("Connect and act with fellow environmental enthusiasts on a platform dedicated to making a sustainable impact.")
+                        .fontWeight(.bold)
+                    Text("Join and act with fellow environmental enthusiasts on a platform dedicated to making a sustainable impact.")
                         .font(.body)
+                    
+                    Spacer()
+                    
+                    CustomDraggableButton(completion: {},
+                                          text: "Let's get started",
+                                          color: Color("darkGreen"))
                 }
+                .background(Color.white.opacity(0.4).cornerRadius(10))
+                .cornerRadius(10)
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color("darkGreen"))
-         
                 Spacer()
-                
-                HStack(spacing: 30) {
-                    CustomButton(text: "Register")
-                    CustomButton(text: "Sign In")
-                }
             })
         .padding(10)
         }

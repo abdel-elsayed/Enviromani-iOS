@@ -18,6 +18,7 @@
 		8E25301D2A9FAAF5008A5BC4 /* Enviromani_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25301C2A9FAAF5008A5BC4 /* Enviromani_iOSTests.swift */; };
 		8E2530272A9FAAF5008A5BC4 /* Enviromani_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2530262A9FAAF5008A5BC4 /* Enviromani_iOSUITests.swift */; };
 		8E2530292A9FAAF5008A5BC4 /* Enviromani_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2530282A9FAAF5008A5BC4 /* Enviromani_iOSUITestsLaunchTests.swift */; };
+		8EBC7EEB2A9FE76A00666C14 /* CustomDraggableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC7EEA2A9FE76A00666C14 /* CustomDraggableButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8E2530222A9FAAF5008A5BC4 /* Enviromani-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Enviromani-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2530262A9FAAF5008A5BC4 /* Enviromani_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviromani_iOSUITests.swift; sourceTree = "<group>"; };
 		8E2530282A9FAAF5008A5BC4 /* Enviromani_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviromani_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EBC7EEA2A9FE76A00666C14 /* CustomDraggableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDraggableButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		8E0055282A9FCEDB00AE94F2 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				8EBC7EEA2A9FE76A00666C14 /* CustomDraggableButton.swift */,
 				8E0055292A9FCEF800AE94F2 /* CustomButton.swift */,
 			);
 			path = UIComponents;
@@ -293,6 +296,7 @@
 			files = (
 				8E00552A2A9FCEF800AE94F2 /* CustomButton.swift in Sources */,
 				8E0055272A9FAD9D00AE94F2 /* WelcomeScreenView.swift in Sources */,
+				8EBC7EEB2A9FE76A00666C14 /* CustomDraggableButton.swift in Sources */,
 				8E25300E2A9FAAF2008A5BC4 /* ContentView.swift in Sources */,
 				8E25300C2A9FAAF2008A5BC4 /* Enviromani_iOSApp.swift in Sources */,
 			);
