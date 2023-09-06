@@ -19,14 +19,9 @@ struct SignInView: View {
                     .font(.system(size: 34.0,
                                   weight: .regular,
                                   design: .rounded))
-//                    .font(.custom(
-//                        "SanFrancisco",
-//                        fixedSize: 34)
-//                        .weight(.black)
-//                    )
-//                    .foregroundColor(Color("darkGreen"))
                     .fontWeight(.bold)
                     .padding(.vertical, 30)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 
                 VStack(spacing: 20) {
                     TextField("Email", text: $email)
@@ -72,9 +67,11 @@ struct SignInView: View {
                     .frame(width: 200, height: 40)
                     .foregroundColor(Color("darkGreen"))
                 }
-                .padding(.bottom, 30)
+                .padding(.bottom, 20)
                 
                 Divider()
+                    .frame(width: 300, height: 1)
+                    .overlay(.gray)
                 
                 HStack(spacing: 30) {
                     Image("facebook")
@@ -100,7 +97,6 @@ struct SignInView: View {
                 }
                 .padding(.bottom, 10)
             }
-            .background(Color.white.opacity(0.4).cornerRadius(10))
             .padding(.horizontal, 10)
             .font(.system(size: 20))
             
