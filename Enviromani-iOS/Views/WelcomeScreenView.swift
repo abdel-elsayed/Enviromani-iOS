@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeScreenView: View {
+    @State var showSignInFlow = false
     var body: some View {
         ZStack {
             Color("lightGreen").ignoresSafeArea()
@@ -32,7 +33,11 @@ struct WelcomeScreenView: View {
                     
                     Spacer()
                     
-                    CustomDraggableButton(completion: {},
+                    CustomDraggableButton(completion: {
+                        DispatchQueue.main.async {
+                            showSignInFlow = true
+                        }
+                    },
                                           text: "Let's get started",
                                           color: Color("darkGreen"))
                 }
@@ -43,6 +48,8 @@ struct WelcomeScreenView: View {
                 Spacer()
             })
         .padding(10)
+        }.sheet(isPresented: $showSignInFlow) {
+            SignInView()
         }
     }
 }

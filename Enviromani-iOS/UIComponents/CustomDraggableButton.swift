@@ -42,11 +42,16 @@ struct CustomDraggableButton: View {
                         }
                     })
                     .onEnded({ _ in
-                        if buttonOffset > buttonWidth / 2 {
-                            buttonOffset = buttonWidth - 80
-                            completion()
-                        } else {
-                            buttonOffset = 0
+                        withAnimation(.easeInOut.delay(0.5)) {
+                            if buttonOffset > buttonWidth / 2 {
+                                buttonOffset = buttonWidth - 80
+                                completion()
+                                
+                                buttonOffset = 0
+                                
+                            } else {
+                                buttonOffset = 0
+                            }
                         }
                     })
                 )
@@ -55,7 +60,7 @@ struct CustomDraggableButton: View {
         }
         .offset(y: isAnimating ? 0 : 40)
         .opacity(isAnimating ? 1 : 0)
-        .animation(.easeOut(duration: 1), value: isAnimating)
+        .animation(.easeOut(duration: 1).delay(1), value: isAnimating)
         .onAppear {
             isAnimating = true
         }
