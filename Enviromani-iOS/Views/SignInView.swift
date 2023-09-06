@@ -15,13 +15,16 @@ struct SignInView: View {
         ZStack {
             Color("lightGreen").ignoresSafeArea()
             VStack(spacing: 20) {
-                Text("Welcome")
-                    .font(.custom(
-                        "AmericanTypewriter",
-                        fixedSize: 34)
-                        .weight(.black)
-                    )
-                    .foregroundColor(Color("darkGreen"))
+                Text("Login")
+                    .font(.system(size: 34.0,
+                                  weight: .regular,
+                                  design: .rounded))
+//                    .font(.custom(
+//                        "SanFrancisco",
+//                        fixedSize: 34)
+//                        .weight(.black)
+//                    )
+//                    .foregroundColor(Color("darkGreen"))
                     .fontWeight(.bold)
                     .padding(.vertical, 30)
                 
@@ -60,18 +63,47 @@ struct SignInView: View {
                 Button {
                     // sign IN
                 } label: {
-                    Text("New to our world? Sign Up Now!")
-                        .fixedSize()
-                        .bold()
-                        .frame(width: 200, height: 40)
-                        .foregroundColor(Color("darkGreen"))
-                        
+                    HStack {
+                        Text("New to our world?") +
+                        Text(" Sign Up now!").bold().font(Font.system(size: 18))
+                    }
+                    .fixedSize()
+                    .font(Font.system(size: 16))
+                    .frame(width: 200, height: 40)
+                    .foregroundColor(Color("darkGreen"))
                 }
                 .padding(.bottom, 30)
+                
+                Divider()
+                
+                HStack(spacing: 30) {
+                    Image("facebook")
+                        .resizable()
+                        .frame(width: 55, height: 55)
+                        .onTapGesture {
+                            // sing in
+                        }
+                    
+                    Image("google")
+                        .resizable()
+                        .frame(width: 55, height: 55)
+                        .onTapGesture {
+                            // sing in
+                        }
+                    
+                    Image("apple")
+                        .resizable()
+                        .frame(width: 55, height: 55)
+                        .onTapGesture {
+                            // sing in
+                        }
+                }
+                .padding(.bottom, 10)
             }
             .background(Color.white.opacity(0.4).cornerRadius(10))
             .padding(.horizontal, 10)
             .font(.system(size: 20))
+            
         }
     }
 }
