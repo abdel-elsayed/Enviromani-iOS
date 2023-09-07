@@ -11,7 +11,7 @@ struct WelcomeScreenView: View {
     @State var showSignInFlow = false
     var body: some View {
         ZStack {
-            Color("lightGreen").ignoresSafeArea()
+//            Color("lightGreen").ignoresSafeArea()
             VStack(alignment: .center, content: {
                 Image("logo")
                     .resizable()
